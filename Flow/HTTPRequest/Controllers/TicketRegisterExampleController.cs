@@ -9,7 +9,7 @@ namespace HTTPRequest.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterTicket([FromBody] JsonDocument data)
         {
-            var userId = data.RootElement.GetProperty("userId").ToString();
+            var phone = data.RootElement.GetProperty("phone").ToString();
             var description = data.RootElement.GetProperty("description").ToString();
 
             // TODO: create a ticket in an external CRM and get the ticket id and SLA (time to finish the task, in resume)
